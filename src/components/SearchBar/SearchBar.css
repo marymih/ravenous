@@ -1,0 +1,108 @@
+.search-section {
+    height: 500px;
+    background: url(../SearchBar/bg.jpeg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+ul::after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    width: 700px;
+    height: 1px;
+    background-color: #ffffff;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 40px;
+    text-align: center;
+}
+li:hover {
+    color: #ad863f;
+}
+li:active {
+    color: #ad863f;
+}
+.search-inputs {
+    margin-bottom: 40px;
+}
+.search-input:last-child {
+    margin-right: 0;
+}
+.search-input {
+    width: 500px;
+    height: 50px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    color: #8E8E8E;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 20px;
+    margin-right: 20px;
+}
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ad863f;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 20px 30px;
+    margin: 0auto;
+}
+@media (max-width: 1090px) {
+    li {
+        font-size: 18px;
+    }
+    ul::after {
+        width: 600px;
+    }
+    .search-input {
+        width: 350px;
+        height: 40px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 800px) {
+    .search-input {
+        width: 250px;
+    }
+}
+@media (max-width: 660px) {
+    li {
+        font-size: 16px;
+    }
+    ul::after {
+        width: 500px;
+    }
+    .search-input {
+        width: 250px;
+        height: 30px;
+        font-size: 16px;
+    }
+    button {
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+}

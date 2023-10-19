@@ -1,0 +1,39 @@
+.business-card {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+}
+.business-card-information {
+    display: flex;
+    justify-content: space-between;
+}
+.business-card-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.business-card-address p {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+.business-card-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+.business-card-reviews p {
+    font-family: 'Work Sans', sans-serif;
+}
+h3 {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ad863f;
+}

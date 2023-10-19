@@ -1,9 +1,10 @@
 import React from "react";
 import Business from "../Business/Business";
+import './BusinessList.css';
 
 const BusinessList = () => {
     return (
-        <div>
+        <div className="business-list">
             <Business />
             <Business />
             <Business />

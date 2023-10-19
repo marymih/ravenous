@@ -1,0 +1,10 @@
+.business-list {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-top: 50px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 70px;
+    row-gap: 30px;
+}

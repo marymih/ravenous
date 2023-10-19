@@ -1,18 +1,7 @@
 import React from "react";
 import './Business.css';
 
-const business = {
-    image: 'https://s3-media0.fl.yelpcdn.com/bphoto/3gXze2PDYYdAtuAYTj70ng/348s.jpg',
-    name: 'JOSEPH',
-    address: 'Friedrichstr. 113',
-    city: 'Berlin',
-    zipCode: '10117',
-    category: 'Israeli',
-    rating: 4.3,
-    reviewCount: 6
-};
-
-const Business = () => {
+const Business = ( {business} ) => {
     return (
         <div className="business-card">
             <img src={business.image} alt={business.name} />

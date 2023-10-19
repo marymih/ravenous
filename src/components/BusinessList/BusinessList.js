@@ -1,16 +1,15 @@
 import React from "react";
-import Business from "../Business/Business";
 import './BusinessList.css';
 
-const BusinessList = () => {
+import Business from "../Business/Business";
+
+
+const BusinessList = ( {businesses} ) => {
     return (
         <div className="business-list">
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
+            {businesses.map((business) => {
+                return <Business business={business} key={business.name} />
+            })}
         </div>
     );
 };

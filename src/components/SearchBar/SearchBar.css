@@ -34,7 +34,7 @@ li {
 li:hover {
     color: #ad863f;
 }
-li:active {
+li.active {
     color: #ad863f;
 }
 .search-inputs {
@@ -55,6 +55,11 @@ li:active {
     padding: 8px 20px;
     margin-right: 20px;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 button {
     cursor: pointer;
     border: none;
@@ -65,7 +70,7 @@ button {
     font-weight: 600;
     color: #ffffff;
     padding: 20px 30px;
-    margin: 0auto;
+    margin: 0 auto;
 }
 @media (max-width: 1090px) {
     li {

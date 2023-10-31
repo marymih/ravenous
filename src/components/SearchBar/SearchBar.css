@@ -55,6 +55,9 @@ li.active {
     padding: 8px 20px;
     margin-right: 20px;
 }
+.search-input.error {
+    background-color: red;
+}
 form {
     display: flex;
     flex-direction: column;

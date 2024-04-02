@@ -1,8 +1,5 @@
 const yelpBaseUrl =
   'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
-require('dotenv-defaults').config({ silent: false });
-const yelpApiKey='QrFzAe-h6sNqhV7M5H0InC93anZiC6krbFLUqk-8rVJ206BRM-FyMBsS4q9sAsV9IArTNNIvaA1Fcf3AIemJblXzwRXdMIiQ35QfpfpoqjHNPv6zRpDJXkiuzTRBZXYx';
-
 
 const requestYelp = async (search, location, sortBy) => {
   let locationQ = `location=${location}`;
@@ -13,7 +10,7 @@ const requestYelp = async (search, location, sortBy) => {
     `${yelpBaseUrl}?${locationQ}&${searchQ}&${sortByQ}`,
     {
       headers: {
-        Authorization: `Bearer ${yelpApiKey}`,
+        Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`,
       },
     }
   )

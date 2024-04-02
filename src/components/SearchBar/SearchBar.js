@@ -10,7 +10,8 @@ const sortByOptions = {
 const SearchBar = ({ searchYelp }) => {
     const [search, setSearch] = useState('');
     const [location, setLocation] = useState('');
-    const [status, setStatus] = useState('search-input');
+    const [searchStatus, setSearchStatus] = useState('search-input');
+    const [locationStatus, setLocationStatus] = useState('search-input');
     const [sortBy, setSortBy] = useState('best_match');
 
     const getSortByClass = (sortByOption) => {
@@ -26,20 +27,24 @@ const SearchBar = ({ searchYelp }) => {
 
     const handleChangeSearch = (event) => {
         setSearch(event.target.value);
-        setStatus("search-input");
+        setSearchStatus("search-input");
     };
 
     const handleChangeLocation = (event) => {
         setLocation(event.target.value);
-        setStatus("search-input");
+        setLocationStatus("search-input");
     };
 
     const handleSearch = (event) => {
         event.preventDefault();
         if (search && location && sortBy) {
             searchYelp(search, location, sortBy);
-        } else {
-            setStatus("search-input error");
+        }
+        if (!search) {
+            setSearchStatus("search-input error");
+        }
+        if (!location) {
+            setLocationStatus("search-input error");
         }
     };
 
@@ -64,8 +69,8 @@ const SearchBar = ({ searchYelp }) => {
             </div>
             <form onSubmit={handleSearch}>
                 <div className="search-inputs">
-                    <input type="text" placeholder="Search Business" className={status} onChange={handleChangeSearch} />
-                    <input type="text" placeholder="Where?" className={status} onChange={handleChangeLocation} />
+                    <input type="text" placeholder="Search Business" className={searchStatus} onChange={handleChangeSearch} />
+                    <input type="text" placeholder="Where?" className={locationStatus} onChange={handleChangeLocation} />
                 </div>
                 <button type="submit">Let's Go</button>
             </form>

@@ -32,12 +32,6 @@ const requestYelp = async (search, location, sortBy) => {
       }));
     });
   return request;
-  // let b = [];
-  // for (let i = 0; i<Math.random()*10;i++) {
-  //     b.push(business)
-  // };
-  // console.log(b);
-  // return b
 };
 
 export default requestYelp;
